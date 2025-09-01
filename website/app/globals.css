@@ -18,14 +18,56 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl;
+    @apply relative px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-800 opacity-0 hover:opacity-100 transition-opacity duration-300;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all duration-200 font-semibold;
+    @apply relative px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold transition-all duration-300 overflow-hidden hover:text-primary-700 hover:border-primary-700;
+  }
+  
+  .btn-secondary::before {
+    content: '';
+    @apply absolute inset-0 bg-primary-50 scale-x-0 origin-left hover:scale-x-100 transition-transform duration-300;
   }
 
   .card-hover {
-    @apply hover:shadow-2xl hover:-translate-y-1 transition-all duration-300;
+    @apply hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer;
+  }
+  
+  /* Smooth scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-400 rounded-full hover:bg-primary-500;
+  }
+  
+  /* Animation classes */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20;
   }
 }
