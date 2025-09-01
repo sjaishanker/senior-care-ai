@@ -26,7 +26,7 @@ class FacilityStats(BaseModel):
 
 @router.get("/", response_model=List[FacilityResponse])
 async def get_facilities(db: Session = Depends(get_db)):
-    facilities = db.query(Facility).all()
+    facilities = db.query(Facility).order_by(Facility.name.asc()).all()
     facility_responses = []
     
     for facility in facilities:
