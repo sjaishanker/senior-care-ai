@@ -48,7 +48,7 @@ const Navbar = () => {
                 Request Demo
               </Link>
               <Link
-                href="https://dashboard.eldercare.ai"
+                href="http://localhost:3000"
                 className="btn-secondary text-sm"
                 target="_blank"
               >
@@ -91,7 +91,7 @@ const Navbar = () => {
               Request Demo
             </Link>
             <Link
-              href="https://dashboard.eldercare.ai"
+              href="http://localhost:3000"
               className="block w-full text-center btn-secondary text-sm mt-2"
               target="_blank"
               onClick={() => setIsOpen(false)}
