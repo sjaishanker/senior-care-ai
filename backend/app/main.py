@@ -1,15 +1,28 @@
+import asyncio
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import residents, vitals, alerts, auth, facilities, compliance
+from app.api import residents, vitals, alerts, auth, facilities, compliance, healthcheck
 from app.models.database import engine, Base
 from app.models import compliance_models
+from app.services.healthcheck import periodic_health_check
 
 Base.metadata.create_all(bind=engine)
+
+# Background task manager
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Start periodic health check
+    task = asyncio.create_task(periodic_health_check())
+    yield
+    # Cancel task on shutdown
+    task.cancel()
 
 app = FastAPI(
     title="Senior Care AI API",
     description="API for Senior Care Management Platform",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 app.add_middleware(
@@ -20,6 +33,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(healthcheck.router, prefix="/api", tags=["Health Check"])
 app.include_router(auth.router, prefix="/api/auth", tags=["Authentication"])
 app.include_router(facilities.router, prefix="/api/facilities", tags=["Facilities"])
 app.include_router(residents.router, prefix="/api/residents", tags=["Residents"])
