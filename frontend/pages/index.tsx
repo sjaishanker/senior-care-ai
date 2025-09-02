@@ -34,6 +34,7 @@ export default function Dashboard() {
   const [selectedFacility, setSelectedFacility] = useState<number | null>(null)
   const [alertSummary, setAlertSummary] = useState<AlertSummary>({ critical: 0, high: 0, medium: 0, low: 0 })
   const [loading, setLoading] = useState(true)
+  const [activeView, setActiveView] = useState('dashboard')
   const router = useRouter()
 
   useEffect(() => {
@@ -106,6 +107,9 @@ export default function Dashboard() {
                 </Link>
                 <Link href="/family-portal" className="text-blue-600 hover:text-blue-800 font-medium">
                   Family Portal
+                </Link>
+                <Link href="/preventive-care" className="text-blue-600 hover:text-blue-800 font-medium">
+                  Preventive Care
                 </Link>
               </div>
               

@@ -2,7 +2,7 @@ import asyncio
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import residents, vitals, alerts, auth, facilities, compliance, healthcheck
+from app.api import residents, vitals, alerts, auth, facilities, compliance, healthcheck, preventive_care, family_portal
 from app.models.database import engine, Base
 from app.models import compliance_models
 from app.services.healthcheck import periodic_health_check
@@ -40,6 +40,8 @@ app.include_router(residents.router, prefix="/api/residents", tags=["Residents"]
 app.include_router(vitals.router, prefix="/api/vitals", tags=["Vitals"])
 app.include_router(alerts.router, prefix="/api/alerts", tags=["Alerts"])
 app.include_router(compliance.router, prefix="/api/compliance", tags=["Compliance"])
+app.include_router(preventive_care.router, prefix="/api/preventive-care", tags=["Preventive Care"])
+app.include_router(family_portal.router, prefix="/api/family", tags=["Family Portal"])
 
 @app.get("/")
 async def root():
