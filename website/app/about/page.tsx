@@ -29,28 +29,16 @@ export default function About() {
 
   const team = [
     {
-      name: "Dr. Ananya Mehta",
-      role: "CEO & Co-Founder",
-      bio: "Former AIIMS geriatrician with 15+ years in elderly care",
+      name: "Jai Shanker Srivastava",
+      role: "CEO & Founder",
+      bio: "Engineer and AI leader with expertise in data platforms and intelligent systems. Published researcher in deep learning, driving innovation at the intersection of AI and business.",
       image: "/team/ceo.jpg"
     },
     {
-      name: "Vikram Singh",
-      role: "CTO & Co-Founder",
-      bio: "IIT Delhi alumnus, Ex-Google AI researcher",
-      image: "/team/cto.jpg"
-    },
-    {
-      name: "Priya Nair",
-      role: "Chief Medical Officer",
-      bio: "20+ years in geriatric medicine and public health",
-      image: "/team/cmo.jpg"
-    },
-    {
-      name: "Rahul Sharma",
-      role: "Head of AI",
-      bio: "PhD in Machine Learning, specialized in healthcare AI",
-      image: "/team/ai-head.jpg"
+      name: "Pushpa B Pujar",
+      role: "COO & Co-Founder",
+      bio: "Biomedical engineer turned AI innovator with expertise in data analytics, automation, and healthcare AI solutions. Experienced in building market intelligence platforms and streamlining enterprise workflows.",
+      image: "/team/coo.jpg"
     }
   ]
 
@@ -248,7 +236,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -258,13 +246,17 @@ export default function About() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
-                <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gray-300 rounded-full"></div>
+                <div className="h-64 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg"
+                  />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-primary-600 text-sm mb-2">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
+                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                  <p className="text-primary-600 text-base mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                 </div>
               </motion.div>
             ))}
