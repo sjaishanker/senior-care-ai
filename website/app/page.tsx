@@ -97,11 +97,11 @@ export default function Home() {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ 
-              backgroundImage: `url('/senior-care-bg.jpg')`,
-              filter: 'brightness(0.7)'
+              backgroundImage: `url('/senior-care-bg-new.jpg')`,
+              filter: 'brightness(0.3)'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-800/70 to-secondary-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/90 to-secondary-900/95"></div>
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
           <motion.div
             animate={{
