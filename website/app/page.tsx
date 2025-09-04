@@ -91,8 +91,17 @@ export default function Home() {
   return (
     <div className="pt-16 overflow-hidden">
       {/* Animated Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 via-white to-secondary-50 min-h-[90vh] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center">
+        {/* Background Image with Overlay */}
         <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              backgroundImage: `url('/senior-care-bg.jpg')`,
+              filter: 'brightness(0.7)'
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-800/70 to-secondary-900/80"></div>
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
           <motion.div
             animate={{
@@ -104,7 +113,7 @@ export default function Home() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-primary-200 to-secondary-200 rounded-full blur-3xl opacity-20"
+            className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -116,7 +125,7 @@ export default function Home() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-secondary-200 to-primary-200 rounded-full blur-3xl opacity-20"
+            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl"
           />
         </div>
 
@@ -138,7 +147,7 @@ export default function Home() {
                 </span>
               </motion.div>
 
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Revolutionizing{' '}
                 <motion.span
                   className="gradient-text inline-block"
@@ -163,7 +172,7 @@ export default function Home() {
                 in India with AI
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-200 mb-8">
                 Empowering care facilities with cutting-edge artificial intelligence to ensure 
                 dignified, proactive, and personalized care for every elderly resident.
               </p>
