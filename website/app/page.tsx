@@ -373,102 +373,258 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Interactive Features Section */}
-      <section className="py-20 bg-gray-50" ref={featuresRef}>
+      {/* Elegant Features Section */}
+      <section className="py-24 relative overflow-hidden" ref={featuresRef}>
+        {/* Premium Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-primary-50/30">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.02]"></div>
+        </div>
+        
+        {/* Floating Orbs */}
+        <motion.div
+          animate={{
+            y: [-20, 20, -20],
+            x: [-10, 10, -10],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary-200/20 to-secondary-200/20 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            y: [20, -20, 20],
+            x: [10, -10, 10],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-secondary-200/20 to-primary-200/20 rounded-full blur-3xl"
+        />
+
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate={featuresControls}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
-          <motion.div variants={fadeInUp} className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Intelligent Features for <span className="gradient-text">Complete Care</span>
+          {/* Section Header with Premium Typography */}
+          <motion.div variants={fadeInUp} className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block mb-4"
+            >
+              <span className="bg-gradient-to-r from-primary-100 to-secondary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold tracking-wide uppercase">
+                Advanced AI Technology
+              </span>
+            </motion.div>
+            
+            <h2 className="text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-gray-900 via-primary-700 to-gray-900 bg-clip-text text-transparent">
+                Intelligent Features for
+              </span>
+              <br />
+              <motion.span
+                className="inline-block mt-2"
+                animate={{
+                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+                style={{
+                  backgroundImage: 'linear-gradient(90deg, #0ea5e9, #d946ef, #0ea5e9)',
+                  backgroundSize: '200% 100%',
+                  backgroundClip: 'text',
+                  WebkitBackgroundClip: 'text',
+                  color: 'transparent',
+                }}
+              >
+                Complete Care Excellence
+              </motion.span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive monitoring and predictive analytics
-              to ensure the highest standard of care for every resident.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Experience the future of senior care with our sophisticated AI-powered platform, 
+              delivering unparalleled monitoring precision and predictive insights.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Feature Cards */}
-            <div className="grid gap-4">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Elegant Feature Cards */}
+            <div className="space-y-4">
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   variants={fadeInLeft}
-                  whileHover={{ x: 10 }}
+                  whileHover={{ x: 8, scale: 1.02 }}
                   onClick={() => setActiveFeature(index)}
-                  className={`p-6 rounded-xl cursor-pointer transition-all ${
-                    activeFeature === index
-                      ? 'bg-white shadow-xl scale-105'
-                      : 'bg-white/60 shadow-md hover:shadow-lg'
+                  className={`group relative cursor-pointer transition-all duration-500 ${
+                    activeFeature === index ? 'scale-[1.02]' : ''
                   }`}
                 >
-                  <div className="flex items-start gap-4">
+                  {/* Card Background */}
+                  <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
+                    activeFeature === index
+                      ? 'bg-gradient-to-r from-white to-gray-50 shadow-2xl shadow-primary-500/10'
+                      : 'bg-white/80 shadow-lg hover:shadow-xl'
+                  }`}></div>
+                  
+                  {/* Active Indicator */}
+                  {activeFeature === index && (
                     <motion.div
-                      animate={{
-                        rotate: activeFeature === index ? 360 : 0,
-                      }}
-                      transition={{ duration: 0.5 }}
-                      className={`p-3 rounded-lg bg-gradient-to-br ${feature.color} text-white`}
-                    >
-                      {feature.icon}
-                    </motion.div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                      <p className="text-gray-600 text-sm">{feature.description}</p>
+                      layoutId="activeIndicator"
+                      className="absolute -left-1 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-400 to-secondary-400 rounded-full"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  )}
+                  
+                  <div className="relative p-6">
+                    <div className="flex items-start gap-5">
+                      {/* Icon Container with Glass Effect */}
+                      <motion.div
+                        animate={{
+                          rotate: activeFeature === index ? 360 : 0,
+                          scale: activeFeature === index ? 1.1 : 1,
+                        }}
+                        transition={{ duration: 0.5, type: "spring" }}
+                        className="relative"
+                      >
+                        <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${feature.color} blur-xl opacity-40`}></div>
+                        <div className={`relative p-4 rounded-xl bg-gradient-to-br ${feature.color} text-white shadow-lg`}>
+                          {feature.icon}
+                        </div>
+                      </motion.div>
+                      
+                      <div className="flex-1">
+                        <h3 className={`text-xl font-semibold mb-2 transition-colors ${
+                          activeFeature === index ? 'text-gray-900' : 'text-gray-800'
+                        }`}>
+                          {feature.title}
+                        </h3>
+                        <p className={`text-sm leading-relaxed transition-colors ${
+                          activeFeature === index ? 'text-gray-700' : 'text-gray-600'
+                        }`}>
+                          {feature.description}
+                        </p>
+                        
+                        {/* Progress Bar */}
+                        {activeFeature === index && (
+                          <motion.div
+                            initial={{ width: 0 }}
+                            animate={{ width: '100%' }}
+                            transition={{ duration: 4, ease: "linear" }}
+                            className="h-0.5 bg-gradient-to-r from-primary-400 to-secondary-400 mt-3 rounded-full"
+                          />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* Feature Preview */}
+            {/* Premium Feature Preview */}
             <motion.div
               variants={fadeInRight}
-              className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden"
+              className="relative"
             >
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeFeature}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="h-full flex flex-col justify-center"
-                >
-                  <div className={`p-4 rounded-lg bg-gradient-to-br ${features[activeFeature].color} text-white mb-6 inline-block self-start`}>
-                    {features[activeFeature].icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{features[activeFeature].title}</h3>
-                  <p className="text-gray-600 mb-6">{features[activeFeature].description}</p>
+              {/* Glass Card Container */}
+              <div className="sticky top-24">
+                <div className="relative">
+                  {/* Glow Effect */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary-300/30 to-secondary-300/30 rounded-3xl blur-2xl"></div>
                   
-                  <div className="space-y-3">
-                    {['Real-time monitoring', 'Predictive analytics', 'Automated alerts'].map((item, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="flex items-center gap-3"
-                      >
-                        <FaCheck className="icon-success" />
-                        <span className="text-gray-700">{item}</span>
-                      </motion.div>
-                    ))}
+                  <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                    {/* Premium Header */}
+                    <div className="px-8 py-6 bg-gradient-to-r from-gray-50 to-white border-b border-gray-100">
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={activeFeature}
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -20 }}
+                          transition={{ duration: 0.3 }}
+                          className="flex items-center gap-4"
+                        >
+                          <div className={`p-3 rounded-xl bg-gradient-to-br ${features[activeFeature].color} text-white shadow-lg`}>
+                            {features[activeFeature].icon}
+                          </div>
+                          <div>
+                            <h3 className="text-2xl font-bold text-gray-900">{features[activeFeature].title}</h3>
+                            <p className="text-sm text-gray-500 mt-1">Advanced AI Solution</p>
+                          </div>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                    
+                    {/* Content Area */}
+                    <div className="p-8">
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={activeFeature}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -20 }}
+                          transition={{ duration: 0.4 }}
+                        >
+                          <p className="text-gray-600 leading-relaxed mb-8">
+                            {features[activeFeature].description}
+                          </p>
+                          
+                          {/* Feature Highlights */}
+                          <div className="space-y-4 mb-8">
+                            {['Real-time monitoring', 'Predictive analytics', 'Automated alerts'].map((item, i) => (
+                              <motion.div
+                                key={i}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                className="flex items-center gap-4 p-3 rounded-xl bg-gradient-to-r from-gray-50 to-white"
+                              >
+                                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-success-400 to-success-500 flex items-center justify-center shadow-sm">
+                                  <FaCheck className="text-white text-sm" />
+                                </div>
+                                <span className="text-gray-700 font-medium">{item}</span>
+                              </motion.div>
+                            ))}
+                          </div>
+                          
+                          {/* CTA Buttons */}
+                          <div className="flex gap-4">
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className="flex-1 bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2"
+                            >
+                              Learn More <FaArrowRight className="text-sm" />
+                            </motion.button>
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className="px-6 py-3 rounded-xl font-semibold border-2 border-gray-200 text-gray-700 hover:bg-gray-50 transition-all"
+                            >
+                              Demo
+                            </motion.button>
+                          </div>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                    
+                    {/* Visual Element */}
+                    <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary-200/20 to-secondary-200/20 rounded-full blur-3xl"></div>
                   </div>
-
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="mt-6 btn-primary inline-flex items-center gap-2 self-start"
-                  >
-                    Learn More <FaArrowRight />
-                  </motion.button>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              </div>
             </motion.div>
           </div>
         </motion.div>
