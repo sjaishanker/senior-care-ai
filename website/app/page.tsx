@@ -231,11 +231,11 @@ export default function Home() {
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-red-400"></div>
                       <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-success-400"></div>
                     </div>
                     <div className="text-xs text-gray-500 font-medium">ElderCare AI Dashboard</div>
                     <div className="flex items-center gap-1">
-                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                      <span className="w-2 h-2 rounded-full bg-success-500 animate-pulse"></span>
                       <span className="text-xs text-gray-500">Live</span>
                     </div>
                   </div>
@@ -354,10 +354,10 @@ export default function Home() {
                       >
                         <div className="flex items-center justify-between">
                           <div>
-                            <p className="text-xs text-green-600 font-medium">Health Score</p>
+                            <p className="text-xs text-success-600 font-medium">Health Score</p>
                             <p className="text-lg font-bold text-gray-800 mt-1">Good</p>
                           </div>
-                          <div className="text-green-500">
+                          <div className="text-success-500">
                             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                             </svg>
@@ -454,7 +454,7 @@ export default function Home() {
                         transition={{ delay: i * 0.1 }}
                         className="flex items-center gap-3"
                       >
-                        <FaCheck className="text-green-500" />
+                        <FaCheck className="icon-success" />
                         <span className="text-gray-700">{item}</span>
                       </motion.div>
                     ))}
@@ -544,7 +544,7 @@ export default function Home() {
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.2 + i * 0.1 }}
-                      className="text-yellow-400 text-xl"
+                      className="text-warning-400 text-xl"
                     >
                       ⭐
                     </motion.span>

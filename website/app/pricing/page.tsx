@@ -170,7 +170,7 @@ export default function Pricing() {
                 }`}
               >
                 Annual
-                <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                <span className="ml-2 text-xs bg-success-100 text-success-700 px-2 py-1 rounded">
                   Save 17%
                 </span>
               </button>
@@ -214,7 +214,7 @@ export default function Pricing() {
                     </span>
                     <span className="text-gray-600">/month</span>
                     {billingCycle === 'annual' && (
-                      <p className="text-sm text-green-600 mt-2">
+                      <p className="text-sm text-success-600 mt-2">
                         ₹{plan.annualPrice.toLocaleString('en-IN')}/year
                       </p>
                     )}
@@ -225,7 +225,7 @@ export default function Pricing() {
                   <div className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start">
-                        <FaCheck className="text-green-500 mt-1 mr-3 flex-shrink-0" />
+                        <FaCheck className="icon-success mt-1 mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))}

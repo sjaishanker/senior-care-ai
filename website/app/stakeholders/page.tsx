@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Stakeholders() {
   const stakeholders = [
     {
-      icon: <FaBuilding className="text-5xl text-primary-600" />,
+      icon: <FaBuilding className="text-5xl icon-primary" />,
       title: "For Care Facility Owners",
       subtitle: "Maximize Efficiency & Profitability",
       painPoints: [
@@ -30,7 +30,7 @@ export default function Stakeholders() {
       cta: "Calculate Your Savings"
     },
     {
-      icon: <FaUserMd className="text-5xl text-green-600" />,
+      icon: <FaUserMd className="text-5xl icon-success" />,
       title: "For Healthcare Providers",
       subtitle: "Deliver Superior Care with AI Assistance",
       painPoints: [
@@ -53,7 +53,7 @@ export default function Stakeholders() {
       cta: "See How It Works"
     },
     {
-      icon: <FaUsers className="text-5xl text-purple-600" />,
+      icon: <FaUsers className="text-5xl icon-secondary" />,
       title: "For Family Members",
       subtitle: "Peace of Mind Through Transparency",
       painPoints: [
@@ -76,7 +76,7 @@ export default function Stakeholders() {
       cta: "Learn About Family Portal"
     },
     {
-      icon: <FaHospital className="text-5xl text-red-600" />,
+      icon: <FaHospital className="text-5xl icon-danger" />,
       title: "For Hospital Networks",
       subtitle: "Reduce Readmissions & Improve Outcomes",
       painPoints: [
@@ -99,7 +99,7 @@ export default function Stakeholders() {
       cta: "Partner With Us"
     },
     {
-      icon: <FaChartLine className="text-5xl text-blue-600" />,
+      icon: <FaChartLine className="text-5xl icon-primary" />,
       title: "For Investors",
       subtitle: "Invest in India's Elder Care Revolution",
       painPoints: [
@@ -122,7 +122,7 @@ export default function Stakeholders() {
       cta: "View Investment Deck"
     },
     {
-      icon: <FaHandshake className="text-5xl text-orange-600" />,
+      icon: <FaHandshake className="text-5xl icon-warning" />,
       title: "For Government & NGOs",
       subtitle: "Scalable Solution for Public Health",
       painPoints: [
@@ -190,11 +190,11 @@ export default function Stakeholders() {
                       
                       <div className="grid md:grid-cols-2 gap-8 mb-8">
                         <div>
-                          <h3 className="text-lg font-semibold mb-4 text-red-600">Current Challenges</h3>
+                          <h3 className="text-lg font-semibold mb-4 text-danger-600">Current Challenges</h3>
                           <ul className="space-y-2">
                             {stakeholder.painPoints.map((point, idx) => (
                               <li key={idx} className="flex items-start">
-                                <span className="text-red-500 mr-2 mt-1">×</span>
+                                <span className="icon-danger mr-2 mt-1">×</span>
                                 <span className="text-gray-700">{point}</span>
                               </li>
                             ))}
@@ -202,11 +202,11 @@ export default function Stakeholders() {
                         </div>
                         
                         <div>
-                          <h3 className="text-lg font-semibold mb-4 text-green-600">Our Solutions</h3>
+                          <h3 className="text-lg font-semibold mb-4 text-success-600">Our Solutions</h3>
                           <ul className="space-y-2">
                             {stakeholder.solutions.map((solution, idx) => (
                               <li key={idx} className="flex items-start">
-                                <span className="text-green-500 mr-2 mt-1">✓</span>
+                                <span className="icon-success mr-2 mt-1">✓</span>
                                 <span className="text-gray-700">{solution}</span>
                               </li>
                             ))}
@@ -264,7 +264,7 @@ export default function Stakeholders() {
               className="bg-white p-8 rounded-xl shadow-lg"
             >
               <div className="flex items-center mb-4">
-                <FaBuilding className="text-3xl text-primary-600 mr-3" />
+                <FaBuilding className="text-3xl icon-primary mr-3" />
                 <div>
                   <h3 className="font-semibold">Sunrise Senior Living, Mumbai</h3>
                   <p className="text-sm text-gray-600">150-bed facility</p>
@@ -288,7 +288,7 @@ export default function Stakeholders() {
               className="bg-white p-8 rounded-xl shadow-lg"
             >
               <div className="flex items-center mb-4">
-                <FaUsers className="text-3xl text-purple-600 mr-3" />
+                <FaUsers className="text-3xl icon-secondary mr-3" />
                 <div>
                   <h3 className="font-semibold">The Sharma Family</h3>
                   <p className="text-sm text-gray-600">Family of resident at Golden Years Delhi</p>
@@ -312,7 +312,7 @@ export default function Stakeholders() {
               className="bg-white p-8 rounded-xl shadow-lg"
             >
               <div className="flex items-center mb-4">
-                <FaUserMd className="text-3xl text-green-600 mr-3" />
+                <FaUserMd className="text-3xl icon-success mr-3" />
                 <div>
                   <h3 className="font-semibold">Dr. Anita Patel</h3>
                   <p className="text-sm text-gray-600">Head Nurse at CarePath Bengaluru</p>
@@ -336,7 +336,7 @@ export default function Stakeholders() {
               className="bg-white p-8 rounded-xl shadow-lg"
             >
               <div className="flex items-center mb-4">
-                <FaHospital className="text-3xl text-red-600 mr-3" />
+                <FaHospital className="text-3xl icon-danger mr-3" />
                 <div>
                   <h3 className="font-semibold">Apollo Hospitals Network</h3>
                   <p className="text-sm text-gray-600">Post-acute care partnership</p>

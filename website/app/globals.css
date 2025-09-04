@@ -13,10 +13,20 @@
 }
 
 @layer components {
+  /* Text Gradients */
   .gradient-text {
     @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
   }
+  
+  .gradient-text-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-secondary {
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-700 bg-clip-text text-transparent;
+  }
 
+  /* Buttons - Consistent across all pages */
   .btn-primary {
     @apply relative px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden;
   }
@@ -34,9 +44,110 @@
     content: '';
     @apply absolute inset-0 bg-primary-50 scale-x-0 origin-left hover:scale-x-100 transition-transform duration-300;
   }
+  
+  .btn-success {
+    @apply px-6 py-3 bg-success-600 text-white rounded-lg font-semibold shadow-lg hover:bg-success-700 hover:shadow-xl transition-all duration-300;
+  }
+  
+  .btn-danger {
+    @apply px-6 py-3 bg-danger-600 text-white rounded-lg font-semibold shadow-lg hover:bg-danger-700 hover:shadow-xl transition-all duration-300;
+  }
 
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300;
+  }
+  
   .card-hover {
     @apply hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer;
+  }
+  
+  .card-gradient {
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl shadow-lg p-6;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .badge-primary {
+    @apply bg-primary-100 text-primary-700;
+  }
+  
+  .badge-secondary {
+    @apply bg-secondary-100 text-secondary-700;
+  }
+  
+  .badge-success {
+    @apply bg-success-100 text-success-700;
+  }
+  
+  .badge-warning {
+    @apply bg-warning-100 text-warning-700;
+  }
+  
+  .badge-danger {
+    @apply bg-danger-100 text-danger-700;
+  }
+
+  /* Icon colors - consistent theming */
+  .icon-primary {
+    @apply text-primary-600;
+  }
+  
+  .icon-secondary {
+    @apply text-secondary-600;
+  }
+  
+  .icon-success {
+    @apply text-success-600;
+  }
+  
+  .icon-warning {
+    @apply text-warning-600;
+  }
+  
+  .icon-danger {
+    @apply text-danger-600;
+  }
+  
+  .icon-info {
+    @apply text-info-600;
+  }
+
+  /* Section backgrounds */
+  .section-gradient {
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50;
+  }
+  
+  .section-primary {
+    @apply bg-primary-50;
+  }
+  
+  .section-secondary {
+    @apply bg-secondary-50;
+  }
+
+  /* Typography */
+  .heading-1 {
+    @apply text-5xl md:text-6xl font-bold text-gray-900;
+  }
+  
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-bold text-gray-900;
+  }
+  
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-semibold text-gray-900;
+  }
+  
+  .text-muted {
+    @apply text-gray-600;
+  }
+  
+  .text-accent {
+    @apply text-primary-600;
   }
   
   /* Smooth scrollbar */

@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Solutions() {
   const solutions = [
     {
-      icon: <FaBrain className="text-4xl text-purple-600" />,
+      icon: <FaBrain className="text-4xl icon-secondary" />,
       title: "AI Health Monitoring",
       subtitle: "Predictive Analytics & Real-time Monitoring",
       features: [
@@ -23,7 +23,7 @@ export default function Solutions() {
       ]
     },
     {
-      icon: <FaShieldAlt className="text-4xl text-green-600" />,
+      icon: <FaShieldAlt className="text-4xl icon-success" />,
       title: "Fall Detection & Prevention",
       subtitle: "Advanced Computer Vision & Predictive Analytics",
       features: [
@@ -39,7 +39,7 @@ export default function Solutions() {
       ]
     },
     {
-      icon: <FaUserMd className="text-4xl text-blue-600" />,
+      icon: <FaUserMd className="text-4xl icon-primary" />,
       title: "Medication Management",
       subtitle: "Automated Tracking & Compliance Monitoring",
       features: [
@@ -55,7 +55,7 @@ export default function Solutions() {
       ]
     },
     {
-      icon: <FaBell className="text-4xl text-red-600" />,
+      icon: <FaBell className="text-4xl icon-danger" />,
       title: "Smart Alert System",
       subtitle: "Intelligent Prioritization & Routing",
       features: [
@@ -71,7 +71,7 @@ export default function Solutions() {
       ]
     },
     {
-      icon: <FaChartLine className="text-4xl text-indigo-600" />,
+      icon: <FaChartLine className="text-4xl icon-info" />,
       title: "Analytics Dashboard",
       subtitle: "Comprehensive Insights & Reporting",
       features: [
@@ -87,7 +87,7 @@ export default function Solutions() {
       ]
     },
     {
-      icon: <FaMobile className="text-4xl text-orange-600" />,
+      icon: <FaMobile className="text-4xl icon-warning" />,
       title: "Family Engagement Portal",
       subtitle: "Connect Families with Real-time Updates",
       features: [
@@ -253,7 +253,7 @@ export default function Solutions() {
                         <ul className="space-y-2">
                           {solution.features.map((feature, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="text-green-500 mr-2">✓</span>
+                              <span className="icon-success mr-2">✓</span>
                               <span className="text-gray-700">{feature}</span>
                             </li>
                           ))}
@@ -264,7 +264,7 @@ export default function Solutions() {
                         <ul className="space-y-2">
                           {solution.benefits.map((benefit, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="text-blue-500 mr-2">→</span>
+                              <span className="icon-info mr-2">→</span>
                               <span className="text-gray-700">{benefit}</span>
                             </li>
                           ))}
@@ -338,7 +338,7 @@ export default function Solutions() {
               className="text-center"
             >
               <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaShieldAlt className="text-3xl text-green-600" />
+                <FaShieldAlt className="text-3xl icon-success" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Full Support</h3>
               <p className="text-gray-600">

@@ -285,7 +285,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <FaWhatsapp className="text-green-600 text-xl mt-1" />
+                  <FaWhatsapp className="icon-success text-xl mt-1" />
                   <div>
                     <p className="font-semibold">WhatsApp Support</p>
                     <p className="text-gray-600">+91 XXXXX-XXXXX</p>
@@ -298,15 +298,15 @@ export default function Contact() {
                 <h3 className="font-semibold text-lg mb-3">Response Time</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="icon-success mr-2">✓</span>
                     Sales inquiries: Within 2 hours
                   </li>
                   <li className="flex items-center">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="icon-success mr-2">✓</span>
                     Support requests: Within 4 hours
                   </li>
                   <li className="flex items-center">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="icon-success mr-2">✓</span>
                     Demo scheduling: Same day confirmation
                   </li>
                 </ul>
@@ -321,8 +321,8 @@ export default function Contact() {
                   <a href="#" className="bg-gray-100 p-3 rounded-lg hover:bg-primary-100 transition-colors">
                     <FaTwitter className="text-2xl text-primary-600" />
                   </a>
-                  <a href="#" className="bg-gray-100 p-3 rounded-lg hover:bg-green-100 transition-colors">
-                    <FaWhatsapp className="text-2xl text-green-600" />
+                  <a href="#" className="bg-gray-100 p-3 rounded-lg hover:bg-success-100 transition-colors">
+                    <FaWhatsapp className="text-2xl icon-success" />
                   </a>
                 </div>
               </div>

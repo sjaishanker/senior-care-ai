@@ -6,22 +6,22 @@ import { FaLightbulb, FaHeart, FaRocket, FaAward } from 'react-icons/fa'
 export default function About() {
   const values = [
     {
-      icon: <FaHeart className="text-3xl text-red-500" />,
+      icon: <FaHeart className="text-3xl icon-danger" />,
       title: "Compassion First",
       description: "Every feature we build starts with empathy for the elderly and their caregivers"
     },
     {
-      icon: <FaLightbulb className="text-3xl text-yellow-500" />,
+      icon: <FaLightbulb className="text-3xl icon-warning" />,
       title: "Innovation for Impact",
       description: "Leveraging cutting-edge AI to solve real-world healthcare challenges"
     },
     {
-      icon: <FaRocket className="text-3xl text-blue-500" />,
+      icon: <FaRocket className="text-3xl icon-primary" />,
       title: "Accessible Technology",
       description: "Making advanced care technology affordable for all Indian care facilities"
     },
     {
-      icon: <FaAward className="text-3xl text-green-500" />,
+      icon: <FaAward className="text-3xl icon-success" />,
       title: "Excellence in Care",
       description: "Setting new standards for quality and dignity in senior care"
     }
@@ -136,19 +136,19 @@ export default function About() {
                 <h3 className="text-2xl font-semibold mb-4 text-primary-600">The Challenge</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
+                    <span className="icon-danger mr-2">•</span>
                     <span>140+ million elderly citizens, expected to reach 300 million by 2050</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
+                    <span className="icon-danger mr-2">•</span>
                     <span>Severe shortage of trained caregivers (1:40 ratio)</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
+                    <span className="icon-danger mr-2">•</span>
                     <span>70% of elderly have chronic conditions requiring constant monitoring</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
+                    <span className="icon-danger mr-2">•</span>
                     <span>Limited access to specialized geriatric care in tier 2/3 cities</span>
                   </li>
                 </ul>
@@ -157,19 +157,19 @@ export default function About() {
                 <h3 className="text-2xl font-semibold mb-4 text-secondary-600">Our Solution</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="icon-success mr-2">✓</span>
                     <span>AI multiplies caregiver effectiveness by 10x</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="icon-success mr-2">✓</span>
                     <span>24/7 monitoring detects issues before they become critical</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="icon-success mr-2">✓</span>
                     <span>Predictive analytics prevents 35% of medical emergencies</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="icon-success mr-2">✓</span>
                     <span>Cloud-based platform accessible from anywhere in India</span>
                   </li>
                 </ul>

@@ -108,7 +108,7 @@ export default function Demo() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <FaCalendar className="text-3xl text-green-600 mx-auto mb-3" />
+              <FaCalendar className="text-3xl icon-success mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Personalized Consultation</h3>
               <p className="text-sm text-gray-600">Discuss your specific challenges and needs</p>
             </motion.div>
@@ -119,7 +119,7 @@ export default function Demo() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <FaClock className="text-3xl text-blue-600 mx-auto mb-3" />
+              <FaClock className="text-3xl icon-primary mx-auto mb-3" />
               <h3 className="font-semibold mb-2">ROI Analysis</h3>
               <p className="text-sm text-gray-600">Get estimated savings for your facility</p>
             </motion.div>
@@ -130,7 +130,7 @@ export default function Demo() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <FaCheckCircle className="text-3xl text-purple-600 mx-auto mb-3" />
+              <FaCheckCircle className="text-3xl icon-secondary mx-auto mb-3" />
               <h3 className="font-semibold mb-2">No Commitment</h3>
               <p className="text-sm text-gray-600">Free demo with no obligations</p>
             </motion.div>
@@ -421,7 +421,7 @@ export default function Demo() {
 
             {step === 4 && (
               <div className="text-center py-12">
-                <FaCheckCircle className="text-6xl text-green-500 mx-auto mb-6" />
+                <FaCheckCircle className="text-6xl icon-success mx-auto mb-6" />
                 <h2 className="text-3xl font-bold mb-4">Demo Scheduled Successfully!</h2>
                 <p className="text-gray-600 mb-8">
                   Thank you for scheduling a demo with ElderCare AI. We've sent a confirmation 
@@ -503,7 +503,7 @@ export default function Demo() {
                 className="text-center"
               >
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">3</span>
+                  <span className="text-2xl font-bold text-success-600">3</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Go Live</h3>
                 <p className="text-gray-600">
