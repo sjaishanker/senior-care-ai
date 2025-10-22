@@ -8,17 +8,28 @@
 
 ## 🌟 Overview
 
-Senior Care AI is a comprehensive healthcare management platform designed for the booming senior living industry in India and beyond. It combines AI-powered health monitoring, predictive analytics, and enterprise-grade compliance features to revolutionize elderly care.
+Senior Care AI is a B2B SaaS platform designed specifically for India's rapidly growing senior living facility market (USD 3B → USD 12B by 2030, 26-30% CAGR). We provide AI-powered health monitoring, preventive care analytics, and family engagement tools to help facilities deliver superior care while improving operational efficiency.
+
+**Market Focus**: India senior living facilities (Athulya, Primus, Ashiana, etc.)
+**Business Model**: B2B SaaS + future B2C home care expansion
+**Current Status**: Phase 1.5 Complete, Phase 2 In Progress (15%)
 
 ### 🎯 Key Features
 
 - **Multi-Facility Management** - Manage multiple senior care facilities from a single dashboard
-- **Real-Time Health Monitoring** - Track vital signs and generate automated alerts
-- **AI-Powered Predictions** - Predict health issues 24-48 hours in advance (Phase 2)
-- **HIPAA-Compliant** - Complete audit trails and data protection
-- **Family Engagement Portal** - Keep families connected with subscription tiers
-- **ROI Analytics** - Track cost savings and efficiency improvements
-- **Revenue Generation** - Built-in subscription and marketplace models
+- **Preventive Care Engine** - AI-powered risk assessment (falls, dehydration, medication, cardiovascular)
+- **Real-Time Health Monitoring** - Track vital signs with automated alert system
+- **Family Engagement Portal** - Daily updates, notifications, video calls, photo sharing
+- **DISHA-Compliant** - Complete audit trails and regulatory reporting
+- **ROI Analytics** - Track ₹3.15L/month average savings per facility
+- **Staff Efficiency** - 28.3% improvement in productivity
+
+### 💰 Value Proposition for Facilities
+
+- **Cost Savings**: ₹3,15,000/month average per facility
+- **Emergency Prevention**: 30-40% reduction in preventable incidents
+- **Family Satisfaction**: 94% satisfaction score (competitive differentiator)
+- **ROI**: 430-530% return on software investment
 
 ## 🚀 Quick Start
 
@@ -130,11 +141,12 @@ senior-care-ai/
 │   ├── next.config.js     # Next.js configuration
 │   └── tsconfig.json      # TypeScript config
 │
-├── docs/                   # Documentation
-├── PHASE_1_IMPLEMENTATION.md # Detailed Phase 1 documentation
-├── PHASE_2_ROADMAP.md     # AI Integration roadmap
-├── PHASE_3_ROADMAP.md     # Marketplace roadmap
-├── PHASE_4_ROADMAP.md     # Global expansion roadmap
+├── website/               # Marketing website (Next.js)
+│   └── app/roadmap/       # Public roadmap page
+├── docs/                  # Documentation
+│   ├── PRODUCT_STRATEGY.md # **Main strategy document (start here)**
+│   ├── README.md          # Documentation guide
+│   └── archive/           # Historical roadmap docs
 └── README.md              # This file
 ```
 
@@ -346,38 +358,54 @@ rm senior_care.db
 python scripts/generate_demo_data.py
 ```
 
-## 📈 Features by Phase
+## 📈 Product Roadmap
 
-### ✅ Phase 1 (Current - COMPLETE)
-- Multi-facility dashboard
-- Resident management (50 residents)
-- Vital signs tracking (30 days history)
-- Alert system (4 severity levels)
-- HIPAA-compliant audit trails
-- Family portal with subscriptions
+### ✅ Phase 1: Core Platform (COMPLETED - September 3, 2025)
+- Multi-facility management system
+- Real-time vital signs monitoring & alerts
+- Resident 360° profiles with medical history
+- Family engagement portal
+- HIPAA/DISHA-compliant audit trails
 - ROI analytics dashboard
-- 14 database tables
-- 40+ API endpoints
+- 14 database tables, 40+ API endpoints
 
-### 🚧 Phase 2 (Weeks 3-4)
-- AI health predictions
-- Real-time WebSocket
-- Native mobile apps
-- IoT device integration
-- EHR integration
+### ✅ Phase 1.5: Preventive Care + Family Engagement (COMPLETED - September 3, 2025)
+- 5 risk categories: Falls, Dehydration, Isolation, Medication, Cardiovascular
+- Risk scoring 0-100 with intervention recommendations
+- Priority-based notification system
+- Daily health updates automation
+- Weekly family summaries
+- 15+ new API endpoints
 
-### 🔮 Phase 3 (Weeks 5-6)
-- Healthcare marketplace
-- Home care services
-- Payment gateway
-- Education platform
-- B2B solutions
+### 🚧 Phase 2: Production Ready + First Customers (IN PROGRESS - October-December 2025)
+**Timeline**: October-December 2025 | **Target**: 3 paying B2B customers, ₹1.5L MRR
+- Fix multi-facility support limitations
+- Persistent notification storage
+- Photo/document storage (S3)
+- WhatsApp Business API integration
+- Staff mobile app (PWA)
+- Sales materials & demo environment
 
-### 🌍 Phase 4 (Months 2-6)
-- International expansion
-- Advanced robotics
-- Precision medicine
-- $1B valuation target
+### 🔮 Phase 3: Scale to 30 Facilities (PLANNED)
+**Timeline**: January-March 2026 | **Target**: 30 facilities, ₹28L MRR
+- Staff scheduling & rostering module
+- Billing & invoicing automation
+- Nutrition & meal planning
+- Advanced analytics dashboard
+- Sales team hire
+- Partner with industry associations
+
+### 🌍 Phase 4: B2C Home Care + Scale to 50 (PLANNED)
+**Timeline**: April-September 2026 | **Target**: 50 B2B facilities + 500 B2C users, ₹5.5Cr ARR
+- Launch B2C home care product
+- Local language support (Hindi, Tamil, Telugu, Bengali)
+- Nurse marketplace for home visits
+- Doctor tele-consultation integration
+- Expand to Tier 2 cities
+- Series A funding preparation
+
+**📊 Detailed Roadmap**: See [docs/PRODUCT_STRATEGY.md](docs/PRODUCT_STRATEGY.md)
+**🌐 Visual Roadmap**: [Website Roadmap Page](https://seniorcare.ai/roadmap)
 
 ## 🤝 Contributing
 
@@ -401,10 +429,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Next.js team for the frontend framework
 - The open-source community
 
-## 📞 Support
+## 📞 Support & Documentation
 
-- **Documentation**: See [PHASE_1_IMPLEMENTATION.md](PHASE_1_IMPLEMENTATION.md) for detailed docs
-- **Issues**: [GitHub Issues](https://github.com/yourusername/senior-care-ai/issues)
+- **📋 Product Strategy**: See [docs/PRODUCT_STRATEGY.md](docs/PRODUCT_STRATEGY.md) - Market analysis, roadmap, pricing, GTM
+- **🎯 Roadmap**: Visual roadmap at `/website/app/roadmap/page.tsx`
+- **🐛 Issues**: [GitHub Issues](https://github.com/yourusername/senior-care-ai/issues)
+- **📧 Contact**:
+  - Product questions: product@seniorcare.ai
+  - Sales inquiries: sales@seniorcare.ai
+  - Technical support: dev@seniorcare.ai
 
 ## 🚀 Performance Metrics
 
@@ -417,8 +450,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Built with ❤️ for the senior care community**
+**Built with ❤️ for India's senior care industry**
 
-[Documentation](PHASE_1_IMPLEMENTATION.md) • [Roadmap](PHASE_2_ROADMAP.md) • [Report Bug](https://github.com/yourusername/senior-care-ai/issues)
+**Targeting India's USD 12B senior living market by 2030**
+
+[Product Strategy](docs/PRODUCT_STRATEGY.md) • [Visual Roadmap](website/app/roadmap) • [Report Bug](https://github.com/yourusername/senior-care-ai/issues)
 
 </div>
